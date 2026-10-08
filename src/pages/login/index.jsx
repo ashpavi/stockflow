@@ -1,9 +1,9 @@
-import DefaultLayout from '../../layout/DefaultLayout'
+import AuthLayout from '../../layout/AuthLayout'
 import React from 'react'
 
 function Login() {
   return (
-    <DefaultLayout>Login</DefaultLayout>
+    <AuthLayout>Login</AuthLayout>
   )
 }
 
