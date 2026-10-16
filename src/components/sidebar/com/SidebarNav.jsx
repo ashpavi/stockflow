@@ -7,9 +7,9 @@ function SidebarNavItem({ item }) {
 
   const { pathname } = useLocation()
 
-  const { label, icon: Icon, badge, to, activePath = [item.to] } = item
+  const { label, icon: Icon, badge, to, activePaths = [item.to] } = item
 
-  const isActive = activePath.includes(pathname)
+  const isActive = activePaths.includes(pathname)
 
 
 

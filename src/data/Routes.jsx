@@ -1,5 +1,5 @@
 import {
-    Home, Login, DistributionRuns,
+    Login, DistributionRuns,
     StockRequests,
     StockSummary,
     ReturnApprovals
@@ -9,7 +9,7 @@ import {
 export const routes = [
     {
         route: "/",
-        page: <Home />
+        page: <StockSummary />
     },
     {
         route: "/login",
