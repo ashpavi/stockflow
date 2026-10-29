@@ -1,17 +1,21 @@
 import React from 'react'
 import { Button } from '../ui/button'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { routes } from '@/data/Routes';
 
 function TopNav() {
-    const navigate = useNavigate()
+    const {pathname}=useLocation();
+    console.log(pathname)
+    const navigate = useNavigate();
+    const pageTitle = routes.find(({route}) => route === pathname)?.title;
 
     return (
-        <div className='flex justify-between items-center h-15 bg-background p-3 border-b border-border'>
-            <div className='font-semibold text-foreground cursor-pointer' onClick={()=>navigate('/')}>Stockflow</div>
-            <Button onClick={()=>
-                navigate('/login')
-            }>Login</Button>
-        </div>
+        <header className='sticky top-0 z-40 flex h-16 w-full items-center gap-2 border-b bg-background px-6'>
+            <h1 className='font-semibold text-foreground'>{pageTitle}</h1>
+            <div className='ml-auto'>
+                <Button onClick={()=> navigate("/login")}>Login</Button>
+            </div>
+        </header>
     )
 }
 

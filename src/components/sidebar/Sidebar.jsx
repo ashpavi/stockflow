@@ -1,15 +1,16 @@
 import React from 'react'
 import { SidebarHeader,SidebarNav,SidebarProfile } from './com'
 
-import { sidebarNav } from '@/data/Nav'
+import { sidebarNav, sidebarProfile } from '@/data/nav'
 
 function Sidebar() {
   return (
-    <div className='w-60 border-r border-border bg-background flex flex-col '>
+    <aside className="sticky top-0 h-screen w-60 shrink-0 flex-col border-r border-border bg-background lg:flex">
+        
         <SidebarHeader/>
         <SidebarNav items={sidebarNav}/>
-        <SidebarProfile/>
-    </div>
+        <SidebarProfile profile={sidebarProfile}/>
+    </aside>
   )
 }
 

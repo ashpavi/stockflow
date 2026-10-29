@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { cn } from 'cn'
+import { cn } from '@/lib/utils'
 
 
 function SidebarNavItem({ item }) {
@@ -15,20 +15,28 @@ function SidebarNavItem({ item }) {
 
   return (
     <li>
-      <NavLink to={to}
-        className={cn({
-          "flex items-center gap-3 w-full h-11 px-3 rounded-lg text-left text-sm font-medium": true,
-          "text-muted-foreground hover:bg-muted hover:text-foreground": true,
-          'bg-[#f0f0f0] text-[#d35630]': isActive
-
-        })}>
-        <Icon className="size-4 shrink-0" />
+      <NavLink
+        to={to}
+        end
+        aria-current={isActive ? 'page' : undefined}
+        className={cn(
+          "flex h-11 w-full items-center gap-3 rounded-lg px-3 text-left text-sm font-medium transition-colors",
+          isActive
+            ? "bg-[#fdf1ed] text-[#a63d1d]"
+            : "text-muted-foreground hover:bg-muted hover:text-foreground",
+        )}
+      >
+        <Icon
+          aria-hidden="true"
+          className="size-4 shrink-0"
+          strokeWidth={1.8}
+        />
         <span>{label}</span>
-        {badge && (
-          <span className='ml-auto bg-[#dd6844] rounded-full px-1 py-0 text-white text-[11px] font-semibold'>
+        {badge ? (
+          <span className="ml-auto inline-flex min-w-5 items-center justify-center rounded-full bg-[#e85d31] px-1.5 py-0.5 text-[11px] font-semibold leading-none text-white">
             {badge}
           </span>
-        )}
+        ) : null}
       </NavLink>
     </li>
   )
