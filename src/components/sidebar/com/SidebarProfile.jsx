@@ -4,9 +4,9 @@ import { UserRound } from 'lucide-react'
 function SidebarProfile({profile}) {
   return (
     <div className='px-4 py-4 mt-auto border-t border-border'>
-      <div className='flex gap-3 items-center justify-center'>
+      <div className='flex gap-3 items-center '>
         <div className='rounded-full flex items-center shrink-0 justify-center size-8 bg-[#fdfded] text-[#a63d1d] border'>
-          <UserRound className='size-5 strokewidth-[1.8] ' />
+          <UserRound aria-hidden="true" className="size-5" strokeWidth={1.8}/>
         </div>
         <div className=' min-w-0 leading-tight'>
           <p className='truncate text-xs font-medium text-foreground'>{profile.name}</p>

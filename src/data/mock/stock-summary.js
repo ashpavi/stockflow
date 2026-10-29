@@ -56,6 +56,14 @@ export const stockMovementData = [
     variance: 225,
     withFdos: 380,
   },
+  {
+    month: "Sep 2026",
+    delivered: 1500,
+    issued: 2000,
+    returned: 200,
+    variance: 200,
+    withFdos: 100,
+  },
 ];
 
 export const stockMovementConfig = {

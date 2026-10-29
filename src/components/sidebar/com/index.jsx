@@ -1,5 +1,4 @@
-import SidebarHeader from './SidebarHeader'
-import SidebarNav from './SidebarNav'
-import SidebarProfile from './SidebarProfile'
+import Sidebar from "../Sidebar";
 
-export { SidebarHeader, SidebarNav, SidebarProfile }
+
+export default Sidebar;

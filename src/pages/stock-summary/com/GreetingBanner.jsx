@@ -12,8 +12,8 @@ function GreetingBanner() {
   } 
 
   return (
-    <section className='relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#d6641c] to-[#efab6b] p-4 sm:p-8'>
-      <div className='absolute -right-20 -top-20 flex size-80 rounded-full '></div>
+    <section className='relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#b23c1b] via-[#d95327] to-[#fc8053] px-6 py-5 text-white shadow-sm'>
+      <div className='absolute -right-20 -top-24 size-72 rounded-full bg-orange-200/15 blur-3xl '></div>
         <Button
           type="button"
           variant="ghost"

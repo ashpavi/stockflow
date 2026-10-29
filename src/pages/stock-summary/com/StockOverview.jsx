@@ -1,17 +1,18 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { stockOverviewItems } from '@/data/mock/stock-summary'
+import UpdateStockDialog from './UpdateStockDialog'
 
 
 
 function OverviewCard({ detail, icon: Icon, label, value}){
     return(
         <Card className="gap-0 rounded-xl py-0 shadow-none">
-            <CardHeader className="flex-row items-center justify-between px-4 pt-4">
+            <CardHeader className="flex-row items-center justify-between px-4 pt-4 gap-1.5">
                 <CardTitle className="text-xs font-medium text-muted-foreground">
                     {label}
                 </CardTitle>
-                <Icon className="size-4 text-muted-foreground" strokeWidth={1.7}/>
+                <Icon className="size-5  text-muted-foreground" strokeWidth={1.7}/>
             </CardHeader>
             <CardContent className="px-4 pb-4 pt-4">
                 <p className="text-2xl font-semibold tracking-tight text-foreground">
@@ -37,6 +38,7 @@ function StockOverview() {
                         All Warehouses - August 2026
                     </p>
                 </div>
+                <UpdateStockDialog />
             </div>
 
             <div className='grid gap-3 sm:grid-cols-2 xl:grid-cols-5'>
