@@ -54,19 +54,7 @@ function ProductStock() {
   }, [query, status]);
 
 
-  // const filteredProducts = useMemo(() => {
-  //   const normalizedQuery = query.trim().toLowerCase();
 
-  //   return productStockItems.filter((product) => {
-  //     const matchesQuery =
-  //       !normalizedQuery ||
-  //       product.name.toLowerCase().includes(normalizedQuery) ||
-  //       product.sku.toLowerCase().includes(normalizedQuery);
-  //     const matchesStatus = status === "all" || product.status === status;
-
-  //     return matchesQuery && matchesStatus;
-  //   });
-  // }, [query, status]);
 
   return (
     <section aria-labelledby="product-stock-heading">
